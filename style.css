@@ -1,0 +1,871 @@
+<style> 
+<!--
+
+
+A:link
+{
+        color: #0066CC;
+        text-decoration: underline;
+}
+
+A:visited
+{
+        color: #0066CC;
+        text-decoration: underline;
+}
+
+A:active
+{
+        color: #0066CC;
+        text-decoration: underline;
+}
+
+A:hover
+{
+        color: #000000;
+        text-decoration: none;
+}
+
+.alternatetabletextdashboard
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: top;
+        text-align: left;
+        background-color: #D7EAFD;
+}
+
+.alternatetableinputbox
+{
+        background-color: #99CCFF;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+}
+
+.alternatetableintegers
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: right;
+        background-color: #99CCFF;
+        white-space: nowrap;
+}
+
+.alternatetabletext
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+        background-color: #99CCFF;
+}
+
+.alternatetableicon
+{
+        vertical-align: middle;
+        text-align: center;
+        background-color: #99CCFF;
+}
+
+.bluebox
+{
+    background-color: #D7EAFD;
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 10px;
+}
+
+body
+{
+        background-color: #FFFFFF;
+        padding: 10px;
+        margin-top: 0;
+        margin-left: 0;
+        margin: 0;
+}
+
+.body_nopadding
+{
+        background-color: #FFFFFF;
+        padding: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin: 0;
+}
+
+
+.buttonleft
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonleft_disabled
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn.gif' );
+}
+
+.buttonleft_selected
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.buttonmiddle
+{
+        height: 20px;
+        border-style: none;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonmiddle_disabled
+{
+        height: 20px;
+        border-style: none;
+        color: #909090;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn.gif' );
+}
+
+.buttonmiddle_selected
+{
+        height: 20px;
+        border-style: none;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.buttonright
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonright_disabled
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn.gif' );
+}
+
+.buttonright_selected
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.button_text
+{
+        border-style: none;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        cursor: hand;
+}
+
+.button_text_disabled
+{
+        border-style: none;
+        color: #909090;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+}
+
+.button
+{
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size:67%;
+        font-weight:bold;
+        cursor:hand
+}
+
+.checkradiobox
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+}
+
+.calendartext
+{
+		color: #000000;
+		font-family: Verdana, Arial, Helvetica, Sans Serif;
+		font-size: 80%;
+		font-weight: bold;
+		vertical-align: top;
+		text-align: right;
+		white-space: nowrap;
+}
+
+.calendar_dates
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+        background-color: #BDDDFD;
+}
+
+.calendar_dates_override
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: normal;
+        vertical-align: right;
+        text-align: right;
+        white-space: nowrap;
+        background-color: #83B6E9;
+}
+
+.checkradiotextlabel
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: left;
+        white-space: nowrap;
+}
+
+.dashboarddescription
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+}
+
+.dashboardpageheading
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: left;
+        white-space: nowrap;
+}
+
+.dashboardviewerheading
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #3399CC;
+
+}
+
+.datatabletext
+{
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+}
+
+.datatabletextnosize
+{
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+}
+
+.datatabledropdownbox
+{
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+}
+
+.datatableinputbox
+{
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+}
+
+.disabled_field
+{
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-style: normal;
+        background-color: #B7B7B7;
+}
+
+.enabled_field
+{
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-style: normal;
+        background-color: #FFFFFF;
+}
+
+.errormessages
+{
+        color: #CC0000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: normal;
+        vertical-align: top;
+        text-align: left;
+}
+
+.errormessages_clockinout
+{
+        color: #CC0000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 140%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+}
+
+.filemenuitemtext_mouseout
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        cursor: default;
+        padding-top: 2px;
+        padding-bottom: 2px;
+}
+
+.filemenuitemtext_mouseover
+{
+        color: #FFFFFF;
+        background-color: #006699;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        cursor: default;
+        padding-top: 2px;
+        padding-bottom: 2px;
+}
+
+.filemenutext
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        cursor: default;
+}
+
+.infomessages
+{
+        color: #009933;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: normal;
+        vertical-align: top;
+        text-align: left;
+}
+
+.infomessages_clockinout
+{
+        color: #009933;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 140%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+}
+
+input
+{
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-style: normal;
+}
+
+.invalidtabletext
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+        background-color: #FF0000;
+}
+
+.menubar
+{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #C0C0C0;
+}
+
+.menubaritem_mouseout
+{
+        border: 1px solid #FFFFFF;
+        cursor: default;
+}
+
+.menubaritem_mouseover
+{
+        border: 1px outset #C0C0C0;
+        cursor: default;
+}
+
+.filemenuitem_default 
+{
+		border: #48d8fb 1px solid;
+}
+
+.defaultButton
+{
+		border: none;
+		width: 0;
+		height: 0;
+}
+
+.menubaritem_selected
+{
+        border: 1px inset #C0C0C0;
+        cursor: default;
+}
+
+.navigationaltext
+{
+        color: #0066CC;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+        text-decoration: underline;
+}
+
+.pageheading
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+}
+
+.browse_pageheading
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: left;
+        white-space: nowrap;
+}
+
+.pca_dashboard_heading
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+}
+
+.popupmenubox
+{
+        border: 2px outset #FFFFFF;
+        background-color: #FFFFFF;
+        z-index: 100;
+        position: absolute;
+        display: none;
+}
+
+.reporterrormessages
+{
+        color: #CC0000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 14pt;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+}
+
+.requiredfield
+{
+        color: #CC0000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: right;
+        white-space: nowrap;
+}
+
+.required_field_asterisk
+{
+        color: #CC0000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+        cursor: default;
+}
+
+.optionally_required_field_delta
+{
+    color: green;
+    font-weight: bold;        
+    vertical-align: middle;
+}
+
+.sectionheading
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: top;
+        text-align: left;
+}
+
+select
+{
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-style: normal;
+        vertical-align: middle;
+        text-align: left;
+}
+
+.tableft
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/left_tab.gif' );
+}
+
+.tableft_on
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/left_tab_on.gif' );
+}
+
+.tabmiddle
+{
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_tab.gif' );
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        cursor: default;
+}
+
+.tabmiddle_on
+{
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_tab_on.gif' );
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        cursor: default;
+}
+
+.tabright
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/right_tab.gif' );
+}
+
+.tabright_on
+{
+        width: 30px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/right_tab_on.gif' );
+}
+
+.tableheading
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 65%;
+        font-weight: bold;
+        background-color: #336699;
+        text-transform: uppercase;
+        vertical-align: top;
+        text-align: center;
+}
+
+.tableheadingcalendar
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 80%;
+        font-weight: bold;
+        background-color: #6699CC;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+}
+
+.tableicon
+{
+        vertical-align: middle;
+        text-align: center;
+}
+
+.tableintegers
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+}
+
+.tabletext
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+}
+
+.tabletextnosize
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+}
+
+.tabletextdashboard
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: top;
+        text-align: left;
+        background-color: #FFFFFF;
+}
+
+.table_header_column1
+{
+        color: #FFFFFF;
+		font-family: Verdana, Arial, Helvetica, Sans Serif;
+		font-size: 65%;
+		font-weight: bold;
+		text-transform: uppercase;
+		vertical-align: top;
+	    text-align: center;
+	    background-color: #006699;
+}
+
+.table_header_column2
+{
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 65%;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: top;
+        text-align: center;
+        background-color: #6699CC;
+}
+
+.table_header_column3
+{
+	    color: #FFFFFF;
+		font-family: Verdana, Arial, Helvetica, Sans Serif;
+		font-size: 65%;
+		font-weight: bold;
+		text-transform: uppercase;
+		vertical-align: top;
+	    text-align: center;
+	    background-color: #99CCFF;
+}
+
+.text
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+}
+
+.textarea
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 95%;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: left;
+}
+
+.textlabel
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+        cursor: default;
+}
+
+.textlabel2
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: right;
+        white-space: nowrap;
+        cursor: default;
+}
+
+.textlabel_disabled
+{
+        color: #B7B7B7;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: right;
+        white-space: nowrap;
+        cursor: default;
+}
+
+.topnavigation
+{
+        color: #FFEC99;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: underline;
+        white-space: nowrap;
+        cursor: hand;
+}
+
+-->
+</style>

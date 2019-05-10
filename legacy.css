@@ -1,0 +1,28 @@
+
+.textlabel
+{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans Serif;
+	font-size:.7em;
+	font-weight:700;
+	vertical-align: middle;
+	text-align: right;
+	white-space: nowrap;
+	cursor: default;
+}
+
+.checkbox
+{
+	border: 0px solid #000
+}
+
+.checkradiotextlabel
+{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans Serif;
+	font-size:.7em;
+	font-weight:700;
+	vertical-align: middle;
+	text-align: left;
+	white-space: nowrap;
+}

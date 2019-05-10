@@ -1,0 +1,629 @@
+<style>
+
+<!-- Hyperlinks --> 
+A:link
+{
+    color: #0066CC;
+    text-decoration: underline;
+}
+
+A:visited
+{
+    color: #0066CC;
+    text-decoration: underline;
+}
+
+A:active
+{
+    color: #0066CC;
+    text-decoration: underline;
+}
+
+A:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+<!-- Browser client area -->
+body
+{
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+<!-- Status messages -->
+.confirmation_messages
+{
+    color: #009933;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: normal;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.information_messages
+{
+    color: #003399;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: normal;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.error_messages
+{
+    color: #CC0000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+
+<!-- Page text -->
+.editable_field
+{
+    border: 2px inset #FFFFFF;
+}
+
+.pageheading
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.readonly_field
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+    border: none;
+    background: none;
+    margin: 3px;
+}
+
+.readonly_textarea
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+    border: none;
+    background: none;
+    margin: 3px;
+    overflow: auto;
+}
+
+.required_col_asterisk
+{
+    color: #CC0000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: right;
+    margin-right: 3px;
+    white-space: nowrap;
+    cursor: default;
+}
+
+
+.required_field_asterisk
+{
+    color: #CC0000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.text
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.disabled_link
+{
+    color: #B7B7B7;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.text_label
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.text_label_left
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.checkradiotextlabel
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: left;
+        white-space: nowrap;
+}
+
+<!-- Input fields (general) -->
+input
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+}
+
+select
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+    vertical-align: middle;
+    text-align: left;
+}
+
+
+<!-- Text input fields -->
+.disabled_field
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+    background-color: #B7B7B7;
+}
+
+.enabled_field
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-style: normal;
+    background-color: #FFFFFF;
+}
+
+
+<!-- Menu Control -->
+.filemenuitemtext_mouseout
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: default;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.filemenuitemtext_mouseover
+{
+    color: #FFFFFF;
+    background-color: #006699;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: default;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.filemenutext
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 67%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.menubar
+{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.menubaritem_mouseout
+{
+    border: 1px solid #FFFFFF;
+    cursor: default;
+}
+
+.menubaritem_mouseover
+{
+    border: 1px outset #C0C0C0;
+    cursor: default;
+}
+
+.filemenuitem_default 
+{
+	border: #48d8fb 1px solid;
+}
+
+.defaultButton
+{
+	border: none;
+	width: 0;
+	height: 0;
+}
+	
+.menubaritem_selected
+{
+    border: 1px inset #C0C0C0;
+    cursor: default;
+}
+
+.popupmenubox
+{
+    border: 2px outset #FFFFFF;
+    background-color: #FFFFFF;
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
+
+<!-- Tables -->
+.table_heading
+{
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 65%;
+    font-weight: bold;
+    background-color: #336699;
+    text-transform: uppercase;
+    vertical-align: top;
+    text-align: center;
+}
+
+.table_text
+{
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+}
+
+.table_even_row
+{
+    background-color: #99CCFF;
+}
+
+.table_highlighted_row
+{
+    background-color: #C0C0C0;
+}
+
+.table_odd_row
+{
+    background-color: #D7EAFD;
+}
+
+.table_selected_row
+{
+    background-color: #FFEC99;
+}
+
+.table_form_fields
+{
+    vertical-align: middle;
+    text-align: center;
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+<!-- Date Chooser -->
+.year_heading
+{
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    background-color: #336699;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.weekday_heading
+{
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    font-weight: bold;
+    background-color: #336699;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.weekday
+{
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    vertical-align: top;
+    text-align: left;
+}
+
+.selected
+{
+    background-color: #FFEC99;
+}
+
+.today
+{
+    background-color: #CCECFF;
+}
+
+.no_day
+{
+    background-color: #EAEAEA;
+}
+
+<!-- Blue Box -->
+.bluebox
+{
+    background-color: #D7EAFD;
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 10px;
+}
+
+.bluebox2
+{
+    background-color: #D7EAFD;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+
+<!-- Buttons -->
+.buttonleft
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonleft_disabled
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn.gif' );
+}
+
+.buttonleft_selected
+{
+        width: 10px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/left_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.buttonmiddle
+{
+        height: 20px;
+        border-style: none;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonmiddle_disabled
+{
+        height: 20px;
+        border-style: none;
+        color: #909090;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn.gif' );
+}
+
+.buttonmiddle_selected
+{
+        height: 20px;
+        border-style: none;
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: top;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.buttonright
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn.gif' );
+        cursor: hand;
+}
+
+.buttonright_disabled
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn.gif' );
+}
+
+.buttonright_selected
+{
+        width: 16px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url( '/com/sap/me/system/common/client/images/right_oval_bttn_selected.gif' );
+        cursor: hand;
+}
+
+.tableft
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/left_tab.gif' );
+}
+
+.tableft_on
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/left_tab_on.gif' );
+}
+
+.tabmiddle
+{
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_tab.gif' );
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        cursor: default;
+}
+
+.tabmiddle_on
+{
+        background: url( '/com/sap/me/system/common/client/images/bkgrd_tab_on.gif' );
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 67%;
+        font-weight: bold;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        cursor: default;
+}
+
+.tabright
+{
+        width: 22px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/right_tab.gif' );
+}
+
+.tabright_on
+{
+        width: 30px;
+        height: 29px;
+        background: url( '/com/sap/me/system/common/client/images/right_tab_on.gif' );
+}
+
+.img_default
+{
+    border: 0;
+}
+
+.dashboardpageheading
+{
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, Sans Serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #B7B7B7;
+}
+
+.subtitlebar
+{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 2 solid #C0C0C0;
+}
+
+<!--  Data Tree Styles; rule names are abbreviated to optimize throughput -->
+.data_tree {font-family: Verdana, Arial, Helvetica, Sans Serif;}
+.dlb {font-size: 70%;font-weight: bold;margin-right:3px;vertical-align: middle;cursor: hand}
+.dv {font-size: 70%;font-weight: normal;margin-right:10px;vertical-align: middle;cursor: hand}
+
+.tc {margin-left:3px;margin-right:3px}
+.fd {margin-right:5px}
+.tl {margin-left:14px;margin-right:5px}
+
+
+
+</style>
