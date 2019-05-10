@@ -1,0 +1,225 @@
+
+/*
+ * LS style override to eliminate overflow on toolbar
+ */
+.lsTbarFlatMenuIndCover {
+    height: 32px !important;
+    width: 46px !important;
+}
+
+.urLnkDsbl {
+    white-space: nowrap;
+    line-height: 24px;
+}
+
+/* lsf-corbu-touch.css overrides to fix panel and page header heights */
+.urLnk, .urLnkReportGl20 {
+    /* line-height: 36px; */
+    height: auto !important; 
+    /* min-width: 56px !important; */
+    display: inline-block;
+}
+
+.urTWhlFlat {
+    /* height: 36px !important; */
+    /*line-height:56px;*/
+    /*padding: 3px;*/
+    /* padding: 0px 6px; - 0px for top and bottom, 11px for left and right (6px set here, 5px are margin set in the contained items */
+}
+
+/* ls_ie6.css overrides to add padding to left of panel header title and fix bottom line display */
+.lsHdArTitle2 {
+    height: 56px !important;
+    padding: 17px 5px 0px 0px; 
+    /* font-family: arial,sans-serif; */
+    /* font-weight: bold; */
+    /* vertical-align: middle; */
+    /* cursor: default; */
+    /* color: rgb(51, 51, 51); */
+    /* -moz-box-sizing: padding-box; */
+}
+
+/* revision to fix panel header issue where Icon displays lower than header */
+.lsHdArTbar .urTWhlFlat, .lsHdArTbar2 .urTWhlFlat {
+    height: auto;
+    /* background-color: transparent; */
+    /* border: medium none; */
+    /* background-image: none; */
+    /* padding: 0px 3px 3px; */
+}
+
+.lsTItmOvflFlat .urTItmLnk, .lsTItmOvflFlat .urTItm {
+    height: auto !important;
+    /* vertical-align: top; */
+    /* padding: 2px 2px 0px; */
+}
+
+.urTWhlFlat .urTItm, .urTWhlFlat .urTItmLnk {
+    height: auto !important;
+    /* vertical-align: top; */
+    /* padding: 0px 2px; */
+    /* display: inline-block; */
+}
+
+.urTItmLnk {
+    height: auto !important;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* padding: 0px 2px; */
+    /* vertical-align: top; */
+}
+
+/* ls_ie6.css overrides to add padding to left of panel header title */
+
+.lsHdArLeft2Exp {
+    padding-left: 8px;
+}
+
+/* reset to defaults so large button height is ok on Firefox */
+.urLBRootCmn {
+    height: auto;
+    min-height: 0;
+}
+
+/* fix centering of table column header text on Firefox */
+.urST5HCMetricContent {
+    padding: 0px 8px;
+}
+
+/* make vertical toolbars 100% height in IE Standards mode */
+.wpmfVTbGrid {
+   height:100%;
+}
+.wpmfVTbGrid>tbody>tr>td { 
+   height:100%; 
+}
+
+/* TOUCH POD RESTYLE */
+
+.urPWOuterBorder {
+    border: none;
+    border-radius: .25rem;
+}
+
+.urPWInnerBorder {
+    position: relative;
+    height: 100%;
+    border: none;
+    border-radius: .25rem;
+    overflow: hidden;
+    background-image: none;
+}
+
+.urPWTtlStd {
+    display: block;
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem;
+    font-family: "72", Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid #007dc5;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+.urPWTtlStd td {
+    padding: 0;
+}
+
+.urPWTtlStd .urPWButton {
+    vertical-align: middle;
+}
+
+.urPWTtlStd .urPWButtonImage {
+    display: block;
+}
+
+.urPWTtlStd .urPWButton,
+.urPWTtlStd .urPWButtonImage {
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
+}
+
+.urPWTitle {
+    height: auto;
+}
+
+.urPWTitleText {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    font-size: 1.2rem !important;
+    font-weight: normal;
+}
+
+.urPWFooterBottomLine {
+    position: absolute;
+    width: 100% !important;
+    max-width: none !important;
+    height: 3rem !important;
+    background-color: #2f3c48 !important;
+    bottom: 0;
+    padding: 0;
+}
+
+.urPWFooterBottomLine .urPWFloatRight {
+    height: 3rem !important;
+}
+
+.urPWFooterBottomLine .urPWButtonTable {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.urPWFooterBottomLine .urPWButtonTable td {
+    padding: 0 1rem;
+}
+
+.urPGRLnk,
+.urPGRLnkDsbl:not(.urPGRPrevPageDsbl):not(.urPGRNxtPageDsbl),
+.urPGRLnkDsblBg {
+    border-radius: 50%;
+}
+.urPGRLnk:focus,
+.urPGRLnkDsbl:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px #00689E;
+}
+.urPGRPrevPage,
+.urPGRPrevPageDsbl,
+.urPGRNxtPage,
+.urPGRNxtPageDsbl {
+    min-width: 80px;
+    width: auto;
+    text-align: center;
+}
+
+.urSTCS table tr:nth-child(odd) .urSTTDRo2 {
+    background-color: #fefeff;
+}
+
+.urSTCS table tr:nth-child(even) .urSTTDRo2 {
+    background-color: rgba(234, 237, 240, .4);
+}
+
+.urPgHSmall .urPgHTTxtSmall,
+.lsHdArTitle,
+.urPWTitleText {
+    font-family: "72", Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.urPgHT2Small {
+    height: 2.5rem;
+    background: none;
+}
+
+.urPgHT2Small td {
+    color: #ffffff;
+}
+
